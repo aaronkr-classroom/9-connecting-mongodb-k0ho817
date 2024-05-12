@@ -6,6 +6,7 @@ const port = 3000,
   layouts = require("express-ejs-layouts"),
   homeController = require("./controllers/homeController"),
   errorController = require("./controllers/errorController"),
+  mongodb = require("mongodb"),
   app = express();
 
 /**
@@ -13,11 +14,15 @@ const port = 3000,
  * Mongoose를 사용한 MongoDB 연결
  */
 // Mongoose 모듈의 요청
-
+const mongoose = require("mongoose");
 // 데이터베이스 연결 설정
-
+mongoose.connect(
+  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs",
+  {useNewUrlParser: True}
+);
 // 애플리케이션이 데이터베이스에 연결됐을 때 메시지 출력
 // db 변수에 데이터베이스 할당
+const db = mongoose.connection;
 
 
 /**
@@ -25,12 +30,16 @@ const port = 3000,
  * 데이터베이스 연결 이벤트 처리
  */
 
+mongoose.connection.once("open", () => {
+  console.log("Successfully connected to MongoDB using Mongoose!");
+});
 
 /**
  * @TODO: Listing 14.3 (p. 206)
  * 스키마 정의
  */
 
+const subscriberSchema = 
 
 /**
  * @TODO: Listing 14.4 (p. 207)
