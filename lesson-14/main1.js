@@ -17,7 +17,7 @@ const port = 3000,
 const mongoose = require("mongoose");
 // 데이터베이스 연결 설정
 mongoose.connect(
-  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs",
+  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs/ut-node.ut-node",
   {useNewUrlParser: True}
 );
 // 애플리케이션이 데이터베이스에 연결됐을 때 메시지 출력
@@ -30,7 +30,7 @@ const db = mongoose.connection;
  * 데이터베이스 연결 이벤트 처리
  */
 
-mongoose.connection.once("open", () => {
+db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
 
@@ -39,12 +39,23 @@ mongoose.connection.once("open", () => {
  * 스키마 정의
  */
 
-const subscriberSchema = 
+const subscriberSchema = mongoose.Schema({
+  name : String,
+  email : String,
+  zipCode : Number,
+  newsletter : Boolean
+});
+
+var Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
 /**
  * @TODO: Listing 14.4 (p. 207)
  * 생성과 저장 구문
  */
+
+var subscriber1 = new subscriberSchema({
+  name : 
+})
 
 
 app.set("port", process.env.PORT || port);

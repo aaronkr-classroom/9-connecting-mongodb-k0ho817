@@ -15,7 +15,7 @@ const port = 3000,
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs",
+  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs/ut-node",
   {useNewUrlParser: true}
 );
 
