@@ -64,8 +64,7 @@ exports.saveSubscriber = (req, res) => {
   console.log();
   let newSubscriber = new Subscriber({
     name: req.body.name,
-    email: req.body.email,
-    phoneNumber: req.body.phoneNumber,
+    email: req.body.email
   }); // 새로운 구독자 추가
 
   /**

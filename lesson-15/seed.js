@@ -11,7 +11,7 @@ const mongoose = require("mongoose"),
 
 // 데이터베이스 연결 설정
 mongoose.connect(
-  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs/test",
+  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs/ut-node",
   {useNewUrlParser: true }
 );
 

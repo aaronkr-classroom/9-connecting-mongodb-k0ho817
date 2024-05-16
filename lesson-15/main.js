@@ -18,7 +18,7 @@ const mongoose = require("mongoose"); // Mongoose 모듈의 요청
 mongoose.Promise = global.Promise; // 필요 없을 것 같은데?
 
 mongoose.connect(
-  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs", // 데이터베이스 연결 설정
+  "mongodb+srv://mkh990817:ansrudgh1@ut-nodejs.06q6zmz.mongodb.net/?retryWrites=true&w=majority&appName=ut-nodejs/ut-node", // 데이터베이스 연결 설정
   { useNewUrlParser: true }
 );
 
